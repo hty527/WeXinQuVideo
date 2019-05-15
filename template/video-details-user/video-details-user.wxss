@@ -1,0 +1,113 @@
+/*视频播放用户信息  */
+
+.player-user {
+  display: flex;
+  flex-direction: row
+}
+
+/*用户信息  */
+
+.player-user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 22rpx;
+  margin-bottom: 22rpx;
+  flex: 6
+}
+
+/*按压效果  */
+
+.tab-item-hover:active {
+  background-color: #eee
+}
+
+/*用户信息和发布时间  */
+
+.user-data-time {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx
+}
+
+.player-user-info-icon {
+  width: 86rpx;
+  height: 86rpx;
+  border-radius: 100rpx
+}
+
+.player-user-info-name {
+  font-size: 15px;
+  font-family: 微软雅黑;
+  color: #000;
+  letter-spacing: 2rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.player-user-info-time {
+  font-size: 22rpx;
+  color: #999;
+  letter-spacing: 0rpx;
+  margin-top: 15rpx
+}
+
+/*视频的介绍文字 父布局*/
+
+.video-desp-view {
+  width: 100%;
+  display: flex;
+  flex-direction: row
+}
+
+.video-desp {
+  width: 100%;
+  padding: 26rpx;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 2rpx;
+  font-size: 16px
+}
+
+/*点赞等信息  */
+
+.player-video-cation-info {
+  display: flex;
+  flex: 2;
+  flex-direction: row;
+  align-items: center
+}
+
+/*播放器的底部视频信息里面的子数据，如点赞，分享，评论,水平方向  */
+
+.video-list-item-data-child-view {
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+
+/*播放器的底部视频信息里面的子数据，如点赞，分享，评论,水平方向  */
+
+.video-list-item-data-child-view-commend {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+
+/*播放器的底部视频信息里面的子数据，如点赞，分享，评论的图片样式*/
+
+.video-list-item-data-child-icon {
+  width: 36rpx;
+  height: 36rpx
+}
+
+/*播放器的底部视频信息里面的子数据，如点赞，分享，评论的文字样式*/
+
+.video-list-item-data-child-text {
+  font-size: 25rpx;
+  color: #999;
+  text-align: center;
+  margin-left: 17rpx
+}

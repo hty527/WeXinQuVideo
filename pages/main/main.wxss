@@ -1,0 +1,28 @@
+@import "../../template/message/message.wxss";
+@import "../../template/video-item/video-item.wxss";
+@import "../../template/top-tab/top-tab.wxss";
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden
+}
+
+.main-tab {
+  position: fixed; /*悬停搜索框的关键样式*/
+  top: 0px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  align-items: center
+}
+
+.main-content {
+  margin-top: 90rpx
+}

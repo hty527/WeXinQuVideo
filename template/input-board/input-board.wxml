@@ -1,0 +1,12 @@
+<!--悬浮的输入面板  -->
+<template name="input-board">
+<view class='inputBarView'>
+        <view class='input-group-view'>
+          <input class='input' placeholder='说点什么吧~' maxlength='50' confirm-type='done' bindinput='onTextChangeListener' type='text' value='{{inputText}}'></input>
+        </view>
+        <button type="{{btn_type}}" catchtap='onClickAddCommend' style="width:120rpx;height:70rpx; font-size:13px">发送</button>
+        <button class='btn-share-bg' open-type="share" style='border-color:#ff5b3b'>
+          <image class='btn-share' src='/image/drawable/ic_share.png'></image>
+        </button>
+      </view>
+</template>

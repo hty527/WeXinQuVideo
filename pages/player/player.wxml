@@ -1,0 +1,45 @@
+<!-- 横向的视频列表-->
+<import src="../../template/horizontal-video-item/horizontal-video-item.wxml" />
+<!-- 垂直的留言列表-->
+<import src="../../template/commend-list/commend-list" />
+<!--顶部的用户头部信息-->
+<import src="../../template/video-details-user/video-details-user" />
+<!--悬浮输入面板-->
+<import src="../../template/input-board/input-board" />
+
+<!--contentView-->
+<view class="container">
+  <view style="display:none">
+    <image src="{{video_info.cover}}" bindload="onImageLoad"></image>
+  </view>
+  <block wx:if="{{showLoading}}">
+    <view class="loading">{{loadingMsg}}</view>
+  </block>
+  <block wx:elif="{{showContent}}">
+    <view class='content'>
+      <view class='video-player-group' style='height:{{video_height}}rpx;'>
+        <video class='video-player' poster='{{video_info.cover}}' src='{{video_info.path}}' controls='true' autoplay='true'></video>
+      </view>
+      <!--头部用户信息  -->
+      <template is="video_details_user" data="{{video_info,isPrice}}" />
+      <!--分割线  -->
+      <view class='video-list-item-line'></view>
+      <!--视频推荐 -->
+      <text class='video-recommend-name'>相关推荐</text>
+      <view class='margin-empty'></view>
+      <!--横向的视频列表-->
+      <template is="horizontal-video-item" data="{{recomend_list}}" />
+      <!--分割线  -->
+      <view class='video-list-item-line'></view>
+      <!--评论列表 -->
+      <text class='video-recommend-name'>网友评论({{video_info.comment_times}})</text>
+      <template is="comment-list" data="{{comment_list,showCommendEmpty,showCommendView,hasMore}}" />
+      <!--输入面板  -->
+      <template is="input-board" data="{{inputText,btn_type}}" />
+      <!--仅当是从分享界面进来才显示回主页按钮  -->
+      <block wx:if='{{isShare}}'>
+        <view class='btn-back' catchtap='onBackHome'>去主页</view>
+      </block>
+    </view>
+  </block>
+</view>

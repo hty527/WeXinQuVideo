@@ -1,0 +1,31 @@
+<!--播放器界面的用户头部信息  -->
+<template name="video_details_user">
+<!--视频的介绍文字  -->
+      <view style='height:10rpx'></view>
+      <view class='video-desp-view'>
+        <text class='video-desp'>{{null==video_info.desp?"看搞笑视频，上新趣就对了~":video_info.desp}}</text>
+      </view>
+      <!--用户及点赞信息-->
+      <view class='player-user'>
+        <!--用户信息  -->
+        <view class='player-user-info'>
+          <image class='player-user-info-icon' src='{{video_info.logo}}'></image>
+          <view class='user-data-time'>
+            <text class='player-user-info-name'>{{video_info.nickname}}</text>
+            <text class='player-user-info-time'>{{video_info.add_time}}</text>
+          </view>
+        </view>
+        <!--点赞信息  -->
+        <view class='player-video-cation-info' catchtap='onClickPrice'>
+          <view class='video-list-item-data-child-view'>
+            <image class='video-list-item-data-child-icon' src="{{isPrice? '/image/drawable/ic_price_true.png':'/image/drawable/ic_price.png'}}"></image>
+            <text class='video-list-item-data-child-text'>{{video_info.collect_times}}</text>
+          </view>
+          <!--分享的次数  -->
+          <button class='video-list-item-data-child-view-commend' open-type="share" catchtap='onClickShare' plain='true' style='border-color:#fff' >
+            <image class='video-list-item-data-child-icon' src='/image/drawable/ic_top_share.png'></image>
+            <text class='video-list-item-data-child-text'>{{video_info.share_times}}</text>
+          </button>
+        </view>
+      </view>
+</template>

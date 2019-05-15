@@ -1,0 +1,7 @@
+<template name='top-tab'>
+<scroll-view class='main-tab-scroll' scroll-x='true'>
+      <block wx:for='{{tab_list}}' wx:for-item='item' wx:for-index='idx' wx:key='{{item.id}}'>
+        <view class="main-tab-item {{item.id==currentTabID ? 'tab-selector-true':'false'}}" data-id='{{item.id}}' bindtap="changeViewType" hover-class='tab-item-hover'>{{item.title}}</view>
+      </block>
+    </scroll-view>
+</template>

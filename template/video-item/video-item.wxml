@@ -1,0 +1,41 @@
+<!--视频的条目  -->
+<template name="video_item">
+  <block wx:if="{{showLoading}}">
+    <view class="loading">加载中,请稍后..</view>
+  </block>
+  <block wx:else>
+    <view class='item-root-view'>
+      <block wx:for='{{video_list}}' wx:for-index="idx" wx:for-item="item" wx:key="{{item.id}}">
+        <!--视频条目父布局-->
+        <view class='video-item' data-id='{{item.id}}' data-path='{{item.path}}' data-cover='{{item.cover}}' data-video_width='{{item.video_width}}' data-video_height='{{item.video_height}}' bindtap='onClickItem' hover-class='tab-item-hover'>
+          <view class='video-cover-view'>
+            <image class='video-item-cover' src='{{item.cover}}' mode='aspectFit' lazy-load='true'></image>
+            <view class='video-item-cover-top'></view>
+            <image class='video-item-play' src='/image/drawable/ic_play.png'></image>
+            <text class='video-item-desp' decode='true'>{{item.desp}}</text>
+          </view>
+          <!--用户头像和播放次数-->
+          <view class='video-userandcount-view'>
+            <!--用户头像  -->
+            <view class='video-user-view'>
+              <image class='video-item-usericon' src='{{item.logo}}' lazy-load='true'></image>
+              <text class='video-item-username'>{{null==item.nickname?"火星人":item.nickname}}</text>
+            </view>
+            <!--播放次数  -->
+            <view class='video-play-count'>
+              <image class='video-play-count-icon' src='/image/drawable/ic_look.png'></image>
+              <text class='video-play-count-text'> {{item.play_times}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <!--加载更多  -->
+    <block wx:if="{{hasMore}}">
+      <view class="loading-tip">加载中,请稍后..</view>
+    </block>
+    <block wx:else>
+      <view class="loading-tip">没有更多内容了</view>
+    </block>
+  </block>
+</template>

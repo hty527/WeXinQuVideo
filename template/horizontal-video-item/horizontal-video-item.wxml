@@ -1,0 +1,21 @@
+<!--水平滑动的视频列表  -->
+<template name="horizontal-video-item">
+  <!--横向的视频列表-->
+  <view class='horizontal-video-list-group'>
+        <scroll-view class='horizontal-video-list' scroll-x='true'>
+          <block wx:for='{{recomend_list}}' wx:for-index="idx" wx:for-item="item" wx:key='{{item.id}}'>
+            <view class='horizontal-video-list-item' catchtap='onRecommendListItemClick' data-id='{{item.video_id}}' data-video_width='{{item.video_width}}' data-video_height='{{item.video_height}}'>
+              <view class='horizontal-video-item-cover-top'></view>
+              <image class='horizontal-video-list-item-cover' mode='aspectFill' lazy-load='true' src='{{item.cover}}'></image>
+              <view class='horizontal-video-list-item-play-view'>
+                <image class='horizontal-video-list-item-play' src='/image/drawable/ic_play.png'></image>
+              </view>
+              <view class='horizontal-play-count'>
+                <image class='horizontal-play-count-icon' src='/image/drawable/ic_play_tims.png'></image>
+                <text class='horizontal-video-list-item-count'>{{item.play_times}}</text>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+</template>

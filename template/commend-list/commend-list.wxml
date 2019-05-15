@@ -1,0 +1,43 @@
+<!--垂直样式的视频留言列表  -->
+<template name="comment-list">
+  <view class='vertical-video-commend'>
+    <block wx:if='{{showCommendEmpty}}'>
+      <!--当留言列表为空的时候显示占位布局  -->
+      <view class='commend-empty'>
+        <image class='commend-empty-icon' src='/image/drawable/iv_com_message_empty.png'></image>
+        <text class='commend-empty-message'>没有留言，说两句吧~</text>
+      </view>
+    </block>
+    <!--留言列表-->
+    <block wx:elif='{{showCommendView}}'>
+      <block wx:for='{{comment_list}}' wx:for-index='idx' wx:for-item='item' wx:key='{{item.id}}'>
+        <view class='vertical-commend-list' hover-class='tab-item-hover' catchtap='clickCommendListItem'>
+          <!--用户头像和用户昵称，时间  -->
+          <view class='vertical-commend-list-user'>
+            <view class='vertical-commend-user-icon-view'><image class='vertical-commend-list-user-icon' src='{{item.logo}}' lazy-load='true' mode='aspectFit'></image></view>
+            
+            <view class='vertical-commend-list-userandtime'>
+              <text class='vertical-commend-list-username'>{{item.nickname}}</text>
+              <text class='vertical-commend-list-time'>{{item.add_time}}</text>
+            </view>
+          </view>
+          <view class='vertical-commend-list-content-view'>
+            <view class='vertical-commend-list-empty-view'></view>
+            <text class='vertical-commend-list-content'>{{item.comment}}</text>
+          </view>
+          <view class='vertical-commend-list-line-view'>
+            <view class='vertical-commend-list-line'></view>
+            <view class='vertical-commend-list-line-empty'></view>
+          </view>
+        </view>
+      </block>
+    </block>
+    <!--加载更多-->
+    <block wx:if="{{hasMore}}">
+      <view class="loading-msg">加载中,请稍后..</view>
+    </block>
+    <block wx:else>
+      <view class="loading-msg">没有更多内容了</view>
+    </block>
+  </view>
+</template>

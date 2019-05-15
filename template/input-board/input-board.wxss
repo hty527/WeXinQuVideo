@@ -1,0 +1,76 @@
+/*输入框面板 ,总的父布局 */
+
+.inputBarView {
+  width: 100%;
+  height: 110rpx;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  flex-grow: 10;
+  /* background-color: rgba(244, 245, 246, 0.98);  */
+  background-color: #f4f5f6;
+  align-items: center
+}
+
+.input-group-view {
+  flex-grow: 2;
+  margin-left: 20rpx;
+  margin-right: 15rpx;
+  height: 70rpx;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white
+}
+
+/*发送和分享的水平父布局  */
+
+.input-send-share-view {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  color: #666;
+  margin-left: 20rpx
+}
+
+/** 修改button默认的点击态样式类**/
+
+.button-hover {
+  background-color: red
+}
+
+/** 添加自定义button点击态样式类**/
+
+.other-button-hover {
+  background-color: #ff5b3b
+}
+
+/*分享  */
+
+.btn-share {
+  width: 45rpx;
+  height: 46rpx;
+  position: absolute;
+  align-content: center
+}
+
+/*分享的父布局  */
+
+.btn-share-bg {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 8px;
+  background-color: #ff5b3b;
+  display: flex;
+  margin-left: 15rpx;
+  margin-right: 20rpx;
+  position: relative;
+  align-items: center;
+  justify-content: space-around
+}

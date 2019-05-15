@@ -1,0 +1,177 @@
+@import "../../comm/style/animation.wxss";
+@import "../../template/message/message.wxss";
+
+/* 视频条目 */
+.flex-mult {
+  flex-flow: column wrap;
+  width: 100%
+}
+
+.WxMasonry {
+  width: 100%;
+  background: #fefefe;
+  border: 2px solid #fcfcfc;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  margin: 5px 2px 2px 2px;
+  transition: opacity 0.4s ease-in-out;
+  display: inline-block
+}
+
+/*按压效果  */
+.tab-item-hover:active {
+  background-color: #eee
+}
+
+.item-root-view {
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center
+}
+
+/*视频条目 group */
+
+.video-item {
+  width: 48%;
+  display: block;
+  border-radius: 10rpx;
+  background-color: #fff;
+  border: 0.8px solid #eee;
+  box-shadow: 0 20rpx 30rpx #e4e4e4;
+  overflow: hidden;
+  animation: fadeIn 1s;
+  margin: 3rpx
+}
+
+/*封面父布局  */
+
+.video-cover-view {
+  width: 100%;
+  height: 640rpx;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center
+}
+
+/*封面  */
+
+.video-item-cover {
+  height: 100%;
+  position: absolute
+}
+
+/*条目的上层半透明View  */
+
+.video-item-cover-top {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.20)
+}
+
+/*播放图标  */
+
+.video-item-play {
+  width: 75rpx;
+  height: 75rpx;
+  display: flex;
+  position: absolute;
+  align-content: center
+}
+
+/*视频条目的说明文字,overflow:hidden;超出一行文字自动隐藏 ,text-overflow:ellipsis文字隐藏后添加省略号 */
+
+.video-item-desp {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  margin: 10rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: 1rpx;
+  color: white
+}
+
+/*用户和播放次数信息  */
+
+.video-userandcount-view {
+  width: 100%/2;
+  height: 70rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+
+/*用户信息  */
+
+.video-user-view {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+
+/*用户头像  */
+
+.video-item-usericon {
+  width: 46rpx;
+  height: 46rpx;
+  margin-left: 20rpx;
+  border-radius: 100rpx
+}
+
+/*用户名称  */
+
+.video-item-username {
+  text-align: center;
+  align-content: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 22rpx;
+  margin-left: 15rpx;
+  letter-spacing: 1rpx
+}
+
+/*播放次数  */
+
+.video-play-count {
+  width: 26%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+
+/* 播放次数图标 */
+
+.video-play-count-icon {
+  width: 24rpx;
+  height: 20rpx;
+  text-align: center;
+  align-content: center
+}
+
+/*播放次数文字  */
+
+.video-play-count-text {
+  color: #333;
+  font-size: 19rpx;
+  margin-left: 10rpx
+}
+
+/*加载中  */
+
+.loading-tip {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  color: #ccc
+}

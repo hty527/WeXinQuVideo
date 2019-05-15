@@ -1,0 +1,27 @@
+<import src="../../template/mulit-video-item/mulit-video-item.wxml" />
+<view class='root-group'>
+<view class="content">
+  <block wx:if="{{showLoading}}">
+    <view class="loading">加载中,请稍后..</view>
+  </block>
+  <block wx:else>
+    <view class="left">
+      <block wx:for="{{video_list}}" wx:for-item="item" wx:key="{{item.id}}">
+   <template is="mulit-item" data="{{...item}}" wx:if="{{index%2==0}}"></template>
+      </block>
+    </view>
+    <view class="right">
+      <block wx:for="{{video_list}}" wx:key="2">
+      <template is="mulit-item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
+      </block>
+    </view>
+  </block>
+</view>
+
+<block wx:if="{{hasMore}}">
+  <view class="loading-tip">加载中,请稍后..</view>
+</block>
+<block wx:else>
+  <view class="loading-tip">没有更多内容了</view>
+</block>
+</view>

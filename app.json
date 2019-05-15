@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/player/player"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ff5b3b",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+
+  "debug": true
+}

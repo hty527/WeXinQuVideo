@@ -1,0 +1,4 @@
+<template name="mulit-item">
+  <view class="video-item" catchtap='onItemClick' data-id='{{video_id}}'>
+    <image class="item-img" src="{{cover}}" mode="widthFix"></image></view>
+</template>

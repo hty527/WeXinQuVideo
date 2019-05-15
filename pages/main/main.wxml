@@ -1,0 +1,14 @@
+<!--顶部标题-->
+<view class='main'>
+  <view class='main-tab'>
+    <import src="../../template/top-tab/top-tab.wxml" />
+    <template is="top-tab" data="{{tab_list,currentTabID}}" />
+  </view>
+  <!--下边内容-->
+  <view class='main-content'>
+    <import src="../../template/video-item/video-item.wxml" />
+    <template is="video_item" data="{{video_list: video_list, hasMore: hasMore, showLoading: showLoading}}" />
+    <import src="../../template/message/message.wxml" />
+    <template is="message" data="{{message: message}}" />
+  </view>
+</view>

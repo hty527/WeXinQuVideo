@@ -1,0 +1,135 @@
+/*视频评论列表  */
+
+.vertical-video-commend {
+  width: 100%;
+  display: flex;
+  flex-direction: column
+}
+
+/*当留言列表为空占位空布局  */
+
+.commend-empty {
+  width: 100%;
+  height: 300rpx;
+  align-items: center;
+  display: flex;
+  flex-direction: column
+}
+
+/*按压效果  */
+
+.tab-item-hover:active {
+  background-color: #eee
+}
+
+.commend-empty-icon {
+  width: 160rpx;
+  height: 160rpx
+}
+
+.commend-empty-message {
+  font-size: 24rpx;
+  color: #999;
+  text-align: center
+}
+
+/*视频评论  */
+
+.vertical-commend-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column
+}
+
+.vertical-commend-list-user {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 22rpx
+}
+
+.vertical-commend-list-user-icon {
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 100rpx
+}
+.vertical-commend-user-icon-view{
+  width: 75rpx;
+  height: 75rpx;
+}
+.vertical-commend-list-userandtime {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-left: 20rpx;
+  flex-direction: column;
+  align-content: center
+}
+
+/*用户昵称  */
+
+.vertical-commend-list-username {
+  font-size: 28rpx;
+  color: #000;
+  letter-spacing: 1rpx
+}
+
+.vertical-commend-list-time {
+  font-size: 22rpx;
+  margin-top: 15rpx;
+  color: #999
+}
+
+/*评论内容 */
+
+.vertical-commend-list-content {
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+  letter-spacing: 2rpx;
+  padding: 18rpx
+}
+
+.vertical-commend-list-content-view {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10rpx
+}
+
+.vertical-commend-list-empty-view {
+  width: 119rpx
+}
+
+/*间隔线  */
+
+.vertical-commend-list-line-view {
+  width: 100%;
+  height: 0.8rpx;
+  display: flex;
+  flex-direction: row
+}
+
+.vertical-commend-list-line {
+  width: 100%;
+  height: 0.8rpx;
+  background: #e9e9e9;
+  margin-left: 119rpx
+}
+
+.vertical-commend-list-line-empty {
+  width: 22rpx
+}
+
+/*加载更多  */
+
+.loading-msg {
+  width: 100%;
+  height: 220rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #ccc;
+  align-content: center;
+  background-color: #f7f7f7
+}

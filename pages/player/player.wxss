@@ -1,0 +1,90 @@
+@import "../../comm/style/animation.wxss";
+@import "../../template/message/message.wxss";
+@import "../../template/horizontal-video-item/horizontal-video-item.wxss";
+@import "../../template/video-details-user/video-details-user.wxss";
+@import "../../template/commend-list/comment-list.wxss";
+@import "../../template/input-board/input-board.wxss";
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden
+}
+
+/*按压效果  */
+
+.tab-item-hover:active {
+  background-color: #eee
+}
+
+/*视频推荐*/
+
+.video-recommend {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15rpx
+}
+
+.video-recommend-icon {
+  width: 40rpx;
+  height: 40rpx
+}
+
+.video-recommend-name {
+  font-size: 16px;
+  font-family: 微软雅黑;
+  padding: 20rpx;
+  color: #000;
+  letter-spacing: 2rpx
+}
+
+.margin-empty {
+  width: 100%;
+  height: 5rpx
+}
+
+/*间隔线  */
+
+.video-list-item-line {
+  width: 100%;
+  height: 20rpx;
+  background: #f4f5f6
+}
+
+.video-player-group {
+  width: 100%;
+  display: flex;
+  position: relative;
+  background-color: #000
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0
+}
+
+/*用户从微信点击的分享进来后才显示的返回按钮  */
+
+.btn-back {
+  position: fixed;
+  display: flex;
+  width: 166rpx;
+  height: 68rpx;
+  flex-direction: row;
+  bottom: 110rpx;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  font-size: 30rpx;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255, 91, 59, 0.90);
+  margin: 20rpx;
+  box-shadow: 0 16rpx 16rpx #fe9b87
+}
